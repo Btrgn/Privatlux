@@ -1,0 +1,455 @@
+/* Privatlux Luxury Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a2e;
+    --deep-blue: #16213e;
+    --gold: #d4af37;
+    --silver: #c0c0c0;
+    --white: #ffffff;
+    --accent-gold: #ffd700;
+    --text-light: rgba(255, 255, 255, 0.9);
+    --text-dim: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--deep-blue) 50%, var(--secondary-dark) 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+}
+
+.diamond-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 40%);
+    animation: shimmer 8s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    color: var(--gold);
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
+    to { text-shadow: 0 0 50px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.3); }
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: var(--text-dim);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.diamond-accent {
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    margin: 0 auto;
+    position: relative;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(405deg); }
+}
+
+.diamond-accent::before,
+.diamond-accent::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+}
+
+.diamond-accent::before {
+    transform: rotate(45deg) scale(0.7);
+}
+
+.diamond-accent::after {
+    transform: rotate(90deg) scale(0.4);
+}
+
+/* Floating Diamonds */
+.floating-diamonds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.diamond {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.diamond-1 { top: 20%; left: 10%; animation-delay: 0s; }
+.diamond-2 { top: 60%; right: 15%; animation-delay: 1.5s; }
+.diamond-3 { bottom: 30%; left: 20%; animation-delay: 3s; }
+.diamond-4 { top: 40%; right: 30%; animation-delay: 4.5s; }
+
+@keyframes float {
+    0%, 100% { transform: rotate(45deg) translateY(0px); opacity: 0.3; }
+    50% { transform: rotate(45deg) translateY(-20px); opacity: 0.8; }
+}
+
+/* Luxury Navigation */
+.luxury-nav {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-diamond {
+    color: var(--gold);
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.nav-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Luxury Cards */
+.luxury-cards {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.luxury-card {
+    background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(22, 33, 62, 0.6));
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.luxury-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+}
+
+.card-shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.luxury-card:hover .card-shine {
+    opacity: 1;
+    animation: shine 0.6s ease-out;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.card-icon {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.luxury-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.luxury-card p {
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+/* Diamond Buttons */
+.button-showcase {
+    text-align: center;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.diamond-button {
+    padding: 1rem 2rem;
+    border: none;
+    background: linear-gradient(145deg, var(--gold), #b8941f);
+    color: var(--primary-dark);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.diamond-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.diamond-button:hover::before {
+    left: 100%;
+}
+
+.diamond-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.diamond-button.secondary {
+    background: linear-gradient(145deg, var(--silver), #a0a0a0);
+}
+
+.diamond-button.outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.diamond-button.outline:hover {
+    background: var(--gold);
+    color: var(--primary-dark);
+}
+
+/* Luxury Footer */
+.luxury-footer {
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+    padding: 3rem 2rem 2rem;
+    position: relative;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-diamonds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--gold) 20%, 
+        var(--silver) 50%, 
+        var(--gold) 80%, 
+        transparent 100%);
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.footer-logo h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+.footer-contact p {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .button-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .diamond-button {
+        width: 200px;
+    }
+}
+
+/* Background Texture Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(192, 192, 192, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
