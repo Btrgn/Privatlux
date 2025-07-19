@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PrivatLux - Premium Escort Directory Website
 
 A modern, full-featured escort directory website similar to Vivastreet, built with Next.js and Node.js. This platform provides a secure, user-friendly interface for escort listings, user management, and premium features.
@@ -306,6 +305,3 @@ For support and questions:
 ---
 
 **Note**: This is a demonstration project. Ensure compliance with local laws and regulations when deploying similar platforms in your jurisdiction.
-=======
-# Privatlux
->>>>>>> 5260f277910ba4e64ae3fc367b1b61c8a4e20469
