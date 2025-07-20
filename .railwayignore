@@ -1,0 +1,7 @@
+frontend/
+frontend/*
+*.md
+.git/
+node_modules/
+.env
+.env.local 
