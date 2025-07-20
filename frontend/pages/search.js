@@ -32,7 +32,7 @@ const SearchPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>UK Escorts and Massages - PrivatLux</title>
+        <title>UK Escorts and Massages - PrivatLux (Updated)</title>
         <meta name="description" content="Search for escorts and massages in the UK. Find verified profiles with photos and videos." />
       </Head>
 
