@@ -21,9 +21,9 @@ export default function Home() {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <a href="#" className="text-gray-700 hover:text-primary-600">Browse Escorts</a>
-              <a href="#" className="text-gray-700 hover:text-primary-600">Login</a>
-              <a href="#" className="btn-primary">Register</a>
+              <Link href="/search" className="text-gray-700 hover:text-primary-600">Browse Escorts</Link>
+              <Link href="/login" className="text-gray-700 hover:text-primary-600">Login</Link>
+              <Link href="/register" className="btn-primary">Register</Link>
             </div>
           </div>
         </div>
