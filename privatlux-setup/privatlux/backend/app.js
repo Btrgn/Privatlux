@@ -65,6 +65,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/privatlux
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/escorts', require('./routes/escorts'));
+app.use('/api/messages', require('./routes/messages'));
+app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/upload', require('./routes/upload'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
