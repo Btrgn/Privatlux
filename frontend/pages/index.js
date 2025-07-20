@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { Crown, Search, MapPin, Star, Eye, Heart } from 'lucide-react';
 
 export default function Home() {
@@ -62,9 +63,9 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <button className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg">
+                <Link href="/search" className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg flex items-center justify-center">
                   Search Escorts
-                </button>
+                </Link>
               </div>
             </div>
           </div>
