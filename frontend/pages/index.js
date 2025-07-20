@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Crown, Search, MapPin, Star, Eye, Heart } from 'lucide-react';
 
+// Force rebuild - Link import fix
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -24,7 +26,7 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/search" className="text-gray-700 hover:text-primary-600">Browse Escorts</Link>
               <Link href="/login" className="text-gray-700 hover:text-primary-600">Login</Link>
-              <Link href="/register" className="btn-primary">Register</Link>
+              <Link href="/register" className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors">Register</Link>
             </div>
           </div>
         </div>
