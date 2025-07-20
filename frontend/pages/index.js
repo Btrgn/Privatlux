@@ -109,10 +109,31 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">PrivatLux</h3>
-          <p className="text-gray-400 mb-4">Premium escort directory connecting you with elite companions across the UK.</p>
-          <p className="text-gray-400">&copy; 2024 PrivatLux. All rights reserved.</p>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold mb-4">PrivatLux</h3>
+            <p className="text-gray-400 mb-4">Premium escort directory connecting you with elite companions across the UK.</p>
+          </div>
+          
+          {/* Footer Links */}
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-6">
+            <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              Terms and Conditions
+            </a>
+            <a href="/adult-content" className="text-gray-400 hover:text-white transition-colors">
+              Adult Content Warning
+            </a>
+            <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+              Contact Us
+            </a>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-400">&copy; 2024 PrivatLux. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
