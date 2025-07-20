@@ -61,14 +61,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/privatlux
   useUnifiedTopology: true,
 })
 .then(() => console.log('Connected to MongoDB'))
-<<<<<<< HEAD
 .catch(err => {
   console.error('MongoDB connection error:', err);
   console.log('Starting server without database connection...');
 });
-=======
-.catch(err => console.error('MongoDB connection error:', err));
->>>>>>> ebcf919a7c984fd8049346aedbb7a74657ca579a
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
@@ -86,7 +82,6 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-<<<<<<< HEAD
 // Demo endpoint for testing without database
 app.get('/api/demo', (req, res) => {
   res.status(200).json({
@@ -102,8 +97,6 @@ app.get('/api/demo', (req, res) => {
   });
 });
 
-=======
->>>>>>> ebcf919a7c984fd8049346aedbb7a74657ca579a
 // 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({ message: 'API endpoint not found' });
