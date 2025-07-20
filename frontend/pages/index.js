@@ -1,6 +1,9 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { Crown, Search, MapPin, Star, Eye, Heart } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+// Dynamically import Link to avoid SSR issues
+const Link = dynamic(() => import('next/link'), { ssr: false });
 
 export default function Home() {
   return (
@@ -22,15 +25,15 @@ export default function Home() {
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-4">
-              <Link href="/search" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="/search" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Browse Escorts
-              </Link>
-              <Link href="/login" className="text-gray-700 hover:text-blue-600 transition-colors">
+              </a>
+              <a href="/login" className="text-gray-700 hover:text-blue-600 transition-colors">
                 Login
-              </Link>
-              <Link href="/register" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              </a>
+              <a href="/register" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Register
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -69,9 +72,9 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <Link href="/search" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg flex items-center justify-center">
+                <a href="/search" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg flex items-center justify-center">
                   Search Escorts
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -124,18 +127,18 @@ export default function Home() {
           
           {/* Footer Links */}
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-6">
-            <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
               Terms and Conditions
-            </Link>
-            <Link href="/adult-content" className="text-gray-400 hover:text-white transition-colors">
+            </a>
+            <a href="/adult-content" className="text-gray-400 hover:text-white transition-colors">
               Adult Content Warning
-            </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            </a>
+            <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">
               Privacy Policy
-            </Link>
-            <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+            </a>
+            <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
               Contact Us
-            </Link>
+            </a>
           </div>
           
           <div className="text-center">
