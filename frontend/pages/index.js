@@ -7,7 +7,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>PrivatLux - Premium Escort Directory UK</title>
-        <meta name="description" content="Discover premium escort services in the UK. Browse verified profiles, read reviews, and connect with elite companions. Updated deployment." />
+        <meta name="description" content="Discover premium escort services in the UK. Browse verified profiles, read reviews, and connect with elite companions. Updated deployment - fixed navigation." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
