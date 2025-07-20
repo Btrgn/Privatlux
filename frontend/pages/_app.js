@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CookieConsent from '../components/CookieConsent';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
+      <CookieConsent />
       <ToastContainer
         position="top-right"
         autoClose={5000}
