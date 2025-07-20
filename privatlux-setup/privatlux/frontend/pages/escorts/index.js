@@ -102,24 +102,16 @@ export default function EscortsIndex() {
       <nav className="bg-white shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-            <Link href="/">
-              <a className="flex items-center space-x-2">
-                <Crown className="w-8 h-8 text-primary-600" />
-                <span className="text-2xl font-bold text-gray-900">
-                  Privat<span className="text-primary-600">Lux</span>
-                </span>
-              </a>
-            </Link>
+                         <Link href="/" className="flex items-center space-x-2">
+               <Crown className="w-8 h-8 text-primary-600" />
+               <span className="text-2xl font-bold text-gray-900">
+                 Privat<span className="text-primary-600">Lux</span>
+               </span>
+             </Link>
             <div className="hidden md:flex items-center space-x-4">
-              <Link href="/escorts">
-                <a className="text-primary-600 font-medium">Browse Escorts</a>
-              </Link>
-              <Link href="/login">
-                <a className="text-gray-700 hover:text-primary-600">Login</a>
-              </Link>
-              <Link href="/register">
-                <a className="btn-primary">Register</a>
-              </Link>
+                             <Link href="/escorts" className="text-primary-600 font-medium">Browse Escorts</Link>
+               <Link href="/login" className="text-gray-700 hover:text-primary-600">Login</Link>
+               <Link href="/register" className="btn-primary">Register</Link>
             </div>
           </div>
         </div>
@@ -350,9 +342,7 @@ export default function EscortsIndex() {
                         Online {new Date(escort.lastOnline).toLocaleDateString()}
                       </span>
                       
-                      <Link href={`/escorts/${escort._id}`}>
-                        <a className="btn btn-primary text-sm">View Profile</a>
-                      </Link>
+                      <Link href={`/escorts/${escort._id}`} className="btn btn-primary text-sm">View Profile</Link>
                     </div>
                   </div>
                 </div>

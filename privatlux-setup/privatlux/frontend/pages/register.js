@@ -132,13 +132,11 @@ export default function Register() {
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <Link href="/">
-            <a className="flex items-center space-x-2">
-              <Crown className="w-8 h-8 text-primary-600" />
-              <span className="text-2xl font-bold text-gray-900">
-                Privat<span className="text-primary-600">Lux</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center space-x-2">
+            <Crown className="w-8 h-8 text-primary-600" />
+            <span className="text-2xl font-bold text-gray-900">
+              Privat<span className="text-primary-600">Lux</span>
+            </span>
           </Link>
         </div>
         <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
@@ -146,10 +144,8 @@ export default function Register() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Already have an account?{' '}
-          <Link href="/login">
-            <a className="font-medium text-primary-600 hover:text-primary-500">
-              Sign in
-            </a>
+          <Link href="/login" className="font-medium text-primary-600 hover:text-primary-500">
+            Sign in
           </Link>
         </p>
       </div>
@@ -386,13 +382,9 @@ export default function Register() {
               />
               <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
                 I agree to the{' '}
-                <Link href="/terms">
-                  <a className="text-primary-600 hover:text-primary-500">Terms of Service</a>
-                </Link>
+                <Link href="/terms" className="text-primary-600 hover:text-primary-500">Terms of Service</Link>
                 {' '}and{' '}
-                <Link href="/privacy">
-                  <a className="text-primary-600 hover:text-primary-500">Privacy Policy</a>
-                </Link>
+                <Link href="/privacy" className="text-primary-600 hover:text-primary-500">Privacy Policy</Link>
               </label>
             </div>
 

@@ -105,13 +105,11 @@ export default function Login() {
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <Link href="/">
-            <a className="flex items-center space-x-2">
-              <Crown className="w-8 h-8 text-primary-600" />
-              <span className="text-2xl font-bold text-gray-900">
-                Privat<span className="text-primary-600">Lux</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center space-x-2">
+            <Crown className="w-8 h-8 text-primary-600" />
+            <span className="text-2xl font-bold text-gray-900">
+              Privat<span className="text-primary-600">Lux</span>
+            </span>
           </Link>
         </div>
         <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
@@ -119,10 +117,8 @@ export default function Login() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Don't have an account?{' '}
-          <Link href="/register">
-            <a className="font-medium text-primary-600 hover:text-primary-500">
-              Sign up
-            </a>
+          <Link href="/register" className="font-medium text-primary-600 hover:text-primary-500">
+            Sign up
           </Link>
         </p>
       </div>
@@ -210,10 +206,8 @@ export default function Login() {
               </div>
 
               <div className="text-sm">
-                <Link href="/forgot-password">
-                  <a className="font-medium text-primary-600 hover:text-primary-500">
-                    Forgot your password?
-                  </a>
+                <Link href="/forgot-password" className="font-medium text-primary-600 hover:text-primary-500">
+                  Forgot your password?
                 </Link>
               </div>
             </div>
@@ -242,10 +236,8 @@ export default function Login() {
             </div>
 
             <div className="mt-6">
-              <Link href="/register">
-                <a className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
-                  Create new account
-                </a>
+              <Link href="/register" className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
+                Create new account
               </Link>
             </div>
           </div>
